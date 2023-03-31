@@ -2,7 +2,7 @@
   hosts: all
   tasks:
    - name: Add Laptop SSH Key
-     authorized_key:
+     ansible.posix.authorized_key:
        user: emerson
        path: /home/emerson/.ssh/authorized_keys
        state: present

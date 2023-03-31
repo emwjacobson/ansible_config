@@ -8,3 +8,10 @@
        state: present
        key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8yKvzEsZEuJIASSWj6qTRq4oOnehKCPIC9yqzFcgxxKV1bGMUtYJMsi9YdDSramgG02ZRplKPudAT072vYL3KQ0JLewXsoSdCHW7TlzSHL4dPGBoYOaxsoUAxWIYtkph+TMJ78Z8pA76Q/NEiBBQL7ATvgJRSkDAaFnxpgtzaOfDa8+/d1enfFb7jAZaDFcWClLL4BkWRIhUCdxc6lLPCssmEhQlaab5/zGLtZ3zAu975IBHH1XwnbwHCUB4ENZpeYcSIJvz291y4l4S6Mp0QCck5rRqjnQzwza+5rww59WxaZ9KwoYGQ0TTVuIwupd032aAJAe/B7Yv9hB65FbAz8zkr7S/sKJkY8/vxZ2dGpfZttnWKj6PClpbATzcFvJCIzGR9NaOCX0A+ClGTsvZhppeOo9qzj6Axe3tumXU+uJNyixQHVx0rZxoxSA1bpfpewOKVild7L7P45G3uF7gd1kocQ5YrmpTg66r82Ztwa6v0CcJUpPOVvpx1Clf3lm8="
        comment: "emerson@iphone"
+   - name: Update packages
+     ansible.builtin.apt:
+       update_cache: yes
+   - name: Upgrade packages
+     ansible.builtin.apt:
+       name: "*"
+       state: latest

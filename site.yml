@@ -14,7 +14,7 @@
       update_cache: true
   - name: Install Neovim
     ansible.builtin.apt:
-      name: apache2
+      name: neovim
       state: present
   - name: Upgrade packages
     ansible.builtin.apt:

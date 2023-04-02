@@ -9,6 +9,13 @@
       state: present
       key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8yKvzEsZEuJIASSWj6qTRq4oOnehKCPIC9yqzFcgxxKV1bGMUtYJMsi9YdDSramgG02ZRplKPudAT072vYL3KQ0JLewXsoSdCHW7TlzSHL4dPGBoYOaxsoUAxWIYtkph+TMJ78Z8pA76Q/NEiBBQL7ATvgJRSkDAaFnxpgtzaOfDa8+/d1enfFb7jAZaDFcWClLL4BkWRIhUCdxc6lLPCssmEhQlaab5/zGLtZ3zAu975IBHH1XwnbwHCUB4ENZpeYcSIJvz291y4l4S6Mp0QCck5rRqjnQzwza+5rww59WxaZ9KwoYGQ0TTVuIwupd032aAJAe/B7Yv9hB65FbAz8zkr7S/sKJkY8/vxZ2dGpfZttnWKj6PClpbATzcFvJCIzGR9NaOCX0A+ClGTsvZhppeOo9qzj6Axe3tumXU+uJNyixQHVx0rZxoxSA1bpfpewOKVild7L7P45G3uF7gd1kocQ5YrmpTg66r82Ztwa6v0CcJUpPOVvpx1Clf3lm8="
       comment: "emerson@iphone"
+  - name: Add head SSH Key
+    ansible.posix.authorized_key:
+      user: emerson
+      path: /home/emerson/.ssh/authorized_keys
+      state: present
+      key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCy8zssp4puS8QgkgZPXktHk5Ds6Ai68tE0pHPEjODiJ6HzjnyV6Hls7emesEvU6FdOw8jZQkdOca+NJ5dTuIaZUvgXZ2GqRiAF6JeZ/UG5ZHrAsRQfI5iMsSzzij1TNlwMwSpn83HKAcfb63K0DXf/r0MIvZqYzDlDmwK3DKEEK6Qcmm4m2O19EtDY50oT3C6qkdIW1ybgk1SCq8ZU5VlGRqyQ/SGI/jGT3GCNGENtoUtfH6px+kuNPUuhawNdCIXTh1eKHpv0vw4cZcxLo8RUrUSpLX7f83Aih22CJ4pa++l83UFNlPLSR5VP+C11FadiCtNUV2Euh5Er1J4lOavzAZHhU825hz4YdyItSC2cVdHEQx0I29cgI6iFOCavEQin9EobcxUqS447j9wU3fwr/ZpMQ/uYQxQwByI0FSbjZn5w65DWs8abuNpth+ohdsftigq+/yRRDMx/I9mRKIrM1RRmo1Tcwv8ul2Gm0wjC2qA9ij+AOdNFmKKgKj/bx3E="
+      comment: "emerson@head"
   - name: Update packages
     ansible.builtin.apt:
       update_cache: true

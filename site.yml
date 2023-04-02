@@ -1,5 +1,5 @@
 ---
-- name: Main
+- name: Common
   hosts: all
   tasks:
   - name: Add Laptop SSH Key
@@ -37,3 +37,15 @@
       marker: '# {mark} ANSIBLE MANAGED BLOCK - neovim'
       block: |
         alias vim=nvim
+- name: Head
+  hosts: head
+  tasks:
+  - name: Install tmux
+    ansible.builtin.apt:
+      update_cache: true
+      name: tmux
+      state: present
+  - name: Copy tmux config
+    ansible.builtin.copy:
+      src: files/tmux.conf
+      dest: /home/emerson/.tmux.conf

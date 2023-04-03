@@ -51,6 +51,8 @@
     ansible.builtin.blockinfile:
       path: /home/emerson/.bashrc
       create: true
+      owner: emerson
+      group: emerson
       insertbefore: BOF
       marker: '# {mark} ANSIBLE MANAGED BLOCK - neovim'
       state: present

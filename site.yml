@@ -33,11 +33,13 @@
       state: directory
       recurse: true
       owner: emerson
+      group: emerson
   - name: Copy Neovim config
     ansible.builtin.copy:
       src: files/neovim.conf
       dest: /home/emerson/.config/nvim/init.vim
       owner: emerson
+      group: emerson
   - name: Add neovim alias
     ansible.builtin.blockinfile:
       path: /home/emerson/.bashrc
@@ -80,3 +82,4 @@
       src: files/tmux.conf
       dest: /home/emerson/.tmux.conf
       owner: emerson
+      group: emerson

@@ -1,0 +1,4 @@
+- name: Make sure Nextcloud is running
+  community.general.snap:
+    name: nextcloud
+    state: enabled

@@ -7,11 +7,15 @@
   hosts: head
   roles:
     - head
-- name: Nginx
-  hosts: nginx
-  roles:
-    - nginx
 - name: NFS
   hosts: nfs
   roles:
     - nfs
+- name: Plex
+  hosts: plex
+  roles:
+    - plex
+- name: Nginx
+  hosts: nginx
+  roles:
+    - nginx

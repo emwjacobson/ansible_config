@@ -1,0 +1,11 @@
+- name: Make sure Plex is running
+  ansible.builtin.systemd:
+    state: started
+    name: plexmediaserver
+- name: Make sure NFS is mounted
+  ansible.posix.mount:
+    fstype: nfs
+    src: 192.168.1.101:/home/emerson/ext/Plex
+    path: /home/emerson/nfs
+    opts: defaults
+    state: mounted

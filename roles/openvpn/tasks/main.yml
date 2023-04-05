@@ -1,0 +1,4 @@
+- name: Make sure OpenVPN is running
+  ansible.builtin.systemd:
+    state: started
+    name: openvpn

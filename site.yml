@@ -15,6 +15,14 @@
   hosts: plex
   roles:
     - plex
+- name: OpenVPN
+  hosts: openvpn
+  roles:
+    - openvpn
+- name: Seedbox
+  hosts: seedbox
+  roles:
+    - seedbox
 - name: Nginx
   hosts: nginx
   roles:

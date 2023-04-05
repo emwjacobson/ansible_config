@@ -1,0 +1,8 @@
+- name: Make sure nfs is running
+  ansible.builtin.systemd:
+    state: started
+    name: nfs-server
+- name: Make sure samba is running
+  ansible.builtin.systemd:
+    state: started
+    name: smbd

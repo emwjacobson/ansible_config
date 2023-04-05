@@ -11,3 +11,7 @@
   hosts: nginx
   roles:
     - nginx
+- name: NFS
+  hosts: nfs
+  roles:
+    - nfs

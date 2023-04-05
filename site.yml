@@ -23,6 +23,10 @@
   hosts: seedbox
   roles:
     - seedbox
+- name: Nextcloud
+  hosts: nextcloud
+  roles:
+    - nextcloud
 - name: Nginx
   hosts: nginx
   roles:

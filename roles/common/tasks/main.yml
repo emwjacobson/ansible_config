@@ -40,7 +40,7 @@
     group: emerson
 - name: Copy Neovim config
   ansible.builtin.copy:
-    src: files/neovim.conf
+    src: neovim.conf
     dest: /home/emerson/.config/nvim/init.vim
     owner: emerson
     group: emerson

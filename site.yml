@@ -3,7 +3,11 @@
   hosts: all
   roles:
     - common
-- name:
+- name: Head
   hosts: head
   roles:
     - head
+- name: Nginx
+  hosts: nginx
+  roles:
+    - nginx

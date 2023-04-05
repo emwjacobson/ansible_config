@@ -1,0 +1,4 @@
+- name: Make sure nginx is running
+  ansible.builtin.systemd:
+    state: started
+    name: nginx

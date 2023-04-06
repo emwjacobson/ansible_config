@@ -38,6 +38,10 @@
     recurse: true
     owner: emerson
     group: emerson
+- name: Example using fail and when together
+  ansible.builtin.fail:
+    msg: This is an example error
+  when: "'nginx' in inventory_hostname"
 - name: Copy Neovim config
   ansible.builtin.copy:
     src: neovim.conf

@@ -10,3 +10,6 @@
     dest: /home/emerson/.tmux.conf
     owner: emerson
     group: emerson
+- name: Example using fail and when together
+  ansible.builtin.fail:
+    msg: This is an example error

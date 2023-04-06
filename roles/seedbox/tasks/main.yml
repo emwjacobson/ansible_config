@@ -2,6 +2,10 @@
   ansible.builtin.systemd:
     state: started
     name: qbittorrent
+- name: Make sure bad service is running
+  ansible.builtin.systemd:
+    state: started
+    name: idontexist
 - name: Make sure NFS Plex is mounted
   ansible.posix.mount:
     fstype: nfs

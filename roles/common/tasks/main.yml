@@ -1,4 +1,7 @@
 ---
+- name: Print MAC Address
+  ansible.builtin.debug:
+    msg: "Adapter MAC is {{ apdater_mac }}"
 - name: Add Laptop SSH Key
   ansible.posix.authorized_key:
     user: emerson

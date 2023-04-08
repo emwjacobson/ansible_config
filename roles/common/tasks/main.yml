@@ -2,7 +2,7 @@
 - name: Print MAC Address
   ansible.builtin.debug:
     msg: "Adapter MAC is {{ apdater_mac }}"
-    when: adapter_mac is defined
+  when: apdater_maci is defined
 - name: Add Laptop SSH Key
   ansible.posix.authorized_key:
     user: emerson

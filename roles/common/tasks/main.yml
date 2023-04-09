@@ -75,20 +75,11 @@
       192.168.1.110 nginx
       192.168.1.112 mchoster
       192.168.1.113 mc-friends
-- name: Apply netplan config
+- name: Apply Systemd Network Config
   block:
-    - name: Clear existing netplan folder
-      ansible.builtin.file:
-        state: absent
-        path: /etc/netplan
-    - name: Create netplan folder
-      ansible.builtin.file:
-        state: directory
-        path: /etc/netplan
-    - name: Add netplan config
+    - name: Add network config template
       ansible.builtin.template:
-        src: 10-ethernet.yaml.j2
-        dest: /etc/netplan/10-ethernet.yaml
+        src: 10-ethernet.network.j2
+        dest: /etc/systemd/network/10-ethernet.network
       notify:
-        - Netplan Apply
-  when: False
+        - Reload Networkctl

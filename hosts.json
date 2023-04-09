@@ -63,7 +63,7 @@
     "hostvars": {
       "192.168.1.100": {
         "hostname": "head",
-        "adapter_mac": "46:20:98:3F:1A:FB",
+        "adapter_mac": "36:ED:76:CF:EE:09",
         "static_ip": "192.168.1.100"
       }, 
       "192.168.1.101": {

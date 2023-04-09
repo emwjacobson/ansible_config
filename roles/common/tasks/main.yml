@@ -91,3 +91,4 @@
         dest: /etc/netplan/10-ethernet.yaml
       notify:
         - Netplan Apply
+  when: False

@@ -1,7 +1,8 @@
 network:
   renderer: networkd
   ethernets:
-    ens18:
+    eth0:
+      set-name: eth0
       match:
         macaddress: {{ adapter_mac }}
       dhcp4: false

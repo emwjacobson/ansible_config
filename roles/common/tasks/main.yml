@@ -81,5 +81,17 @@
       ansible.builtin.template:
         src: 10-ethernet.network.j2
         dest: /etc/systemd/network/10-ethernet.network
-      notify:
-        - Reload Networkctl
+    - name: Reload Networkctl
+      ansible.builtin.shell: networkctl reload
+      async: 100
+      poll: 0
+    - name: Wait for SSH to restart
+      local_action:
+        module: wait_for
+        host: "127.0.0.1"
+        port: 22
+        delay: 20
+        state: started
+    - name: Success
+      ansible.builtin.debug:
+        msg: "{{ ansible_host }} {{ inventory_hostname }} Alive!"

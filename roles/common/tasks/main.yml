@@ -77,7 +77,7 @@
       192.168.1.113 mc-friends
 - name: Apply Systemd Network Config
   block:
-    # chttps://serverfault.com/a/1123452
+    # https://serverfault.com/a/1123452
     - name: Add network config template
       ansible.builtin.template:
         src: 10-ethernet.network.j2
@@ -91,8 +91,9 @@
         module: wait_for
         host: "127.0.0.1"
         port: 22
-        delay: 60
+        delay: 30
         state: started
+        connect_timeout: 30
     - name: Success
       ansible.builtin.debug:
         msg: "{{ ansible_host }} {{ inventory_hostname }} Alive!"

@@ -93,9 +93,6 @@
         module: wait_for
         host: "{{ static_ip }}"
         port: 22
-        delay: 30
+        delay: 10
         state: started
         connect_timeout: 30
-    - name: Success
-      ansible.builtin.debug:
-        msg: "{{ ansible_host }} {{ inventory_hostname }} Alive!"

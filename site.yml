@@ -35,3 +35,7 @@
   hosts: mc_friends
   roles:
     - mc_friends
+- name: Docker
+  hosts: docker
+  roles:
+    - docker

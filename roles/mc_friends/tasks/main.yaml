@@ -1,4 +1,0 @@
-- name: Make sure minecraft server is running
-  ansible.builtin.systemd:
-    state: started
-    name: minecraft

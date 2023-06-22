@@ -3,6 +3,8 @@
     project_src: /home/emerson/emwj.dev/
     project_name: portfolio
     state: present
+    build: true
+    files: docker-compose-prod.yml
 - name: Make sure cloudflare-ddns is running
   community.docker.docker_compose:
     project_src: /home/emerson/cloudflare-ddns/
@@ -12,4 +14,9 @@
   community.docker.docker_compose:
     project_src: /home/emerson/CLU/
     project_name: clu
+    state: present
+- name: Make sure Kanboard is running
+  community.docker.docker_compose:
+    project_src: /home/emerson/kanboard/
+    project_name: kanboard
     state: present

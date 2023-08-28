@@ -1,62 +1,62 @@
 {
   "all": {
     "hosts": [
-      "head.intra.emwj.dev",
-      "nfs.intra.emwj.dev",
-      "plex.intra.emwj.dev",
-      "docker.intra.emwj.dev",
-      "openvpn.intra.emwj.dev",
-      "seedbox.intra.emwj.dev",
-      "playground.intra.emwj.dev",
-      "nextcloud.intra.emwj.dev",
-      "nginx.intra.emwj.dev",
-      "mchoster.intra.emwj.dev",
-      "mc-friends.intra.emwj.dev"
+      "head.emwj.local",
+      "nfs.emwj.local",
+      "plex.emwj.local",
+      "docker.emwj.local",
+      "openvpn.emwj.local",
+      "seedbox.emwj.local",
+      "playground.emwj.local",
+      "nextcloud.emwj.local",
+      "nginx.emwj.local",
+      "mchoster.emwj.local",
+      "mc-friends.emwj.local"
     ]
   },
   "head": {
     "hosts": [
-      "head.intra.emwj.dev"
+      "head.emwj.local"
     ]
   },
   "nfs": {
     "hosts": [
-      "nfs.intra.emwj.dev"
+      "nfs.emwj.local"
     ]
   },
   "plex": {
     "hosts": [
-      "plex.intra.emwj.dev"
+      "plex.emwj.local"
     ]
   },
   "docker": {
     "hosts": [
-      "docker.intra.emwj.dev"
+      "docker.emwj.local"
     ]
   },
   "openvpn": {
     "hosts": [
-      "openvpn.intra.emwj.dev"
+      "openvpn.emwj.local"
     ]
   },
   "seedbox": {
     "hosts": [
-      "seedbox.intra.emwj.dev"
+      "seedbox.emwj.local"
     ]
   },
   "nextcloud": {
     "hosts": [
-      "nextcloud.intra.emwj.dev"
+      "nextcloud.emwj.local"
     ]
   },
   "nginx": {
     "hosts": [
-      "nginx.intra.emwj.dev"
+      "nginx.emwj.local"
     ]
   },
   "mc_friends": {
     "hosts": [
-      "mc-friends.intra.emwj.dev"
+      "mc-friends.emwj.local"
     ]
   },
   "_meta": {

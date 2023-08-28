@@ -71,7 +71,7 @@
     - name: Wait for SSH to restart
       local_action:
         module: wait_for
-        host: "{{ static_ip }}"
+        host: "{{ inventory_hostname }}"
         port: 22
         delay: 10
         state: started

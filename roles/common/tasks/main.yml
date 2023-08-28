@@ -55,26 +55,6 @@
     state: present
     block: |
       alias vim=nvim
-- name: Add servers to hosts file
-  ansible.builtin.blockinfile:
-    path: /etc/hosts
-    create: true
-    insertafter: EOF
-    marker: '# {mark} ANSIBLE MANAGED BLOCK - hosts'
-    state: present
-    block: |
-      192.168.1.100 head
-      192.168.1.101 nfs
-      192.168.1.102 plex
-      192.168.1.103 docker
-      192.168.1.104 windows
-      192.168.1.105 openvpn
-      192.168.1.106 seedbox
-      192.168.1.107 playground
-      192.168.1.108 nextcloud
-      192.168.1.110 nginx
-      192.168.1.112 mchoster
-      192.168.1.113 mc-friends
 - name: Apply Systemd Network Config
   block:
     # https://serverfault.com/a/1123452

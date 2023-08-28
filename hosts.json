@@ -1,120 +1,109 @@
 {
   "all": {
     "hosts": [
-      "192.168.1.100",
-      "192.168.1.101",
-      "192.168.1.102",
-      "192.168.1.103",
-      "192.168.1.105",
-      "192.168.1.106",
-      "192.168.1.107",
-      "192.168.1.108",
-      "192.168.1.110",
-      "192.168.1.112",
-      "192.168.1.113"
+      "head",
+      "nfs",
+      "plex",
+      "docker",
+      "openvpn",
+      "seedbox",
+      "playground",
+      "nextcloud",
+      "nginx",
+      "mchoster",
+      "mc-friends"
     ]
   },
   "head": {
     "hosts": [
-      "192.168.1.100"
+      "head"
     ]
   },
   "nfs": {
     "hosts": [
-      "192.168.1.101"
+      "nfs"
     ]
   },
   "plex": {
     "hosts": [
-      "192.168.1.102"
+      "plex"
     ]
   },
   "docker": {
     "hosts": [
-      "192.168.1.103"
+      "docker"
     ]
   },
   "openvpn": {
     "hosts": [
-      "192.168.1.105"
+      "openvpn"
     ]
   },
   "seedbox": {
     "hosts": [
-      "192.168.1.106"
+      "seedbox"
     ]
   },
   "nextcloud": {
     "hosts": [
-      "192.168.1.108"
+      "nextcloud"
     ]
   },
   "nginx": {
     "hosts": [
-      "192.168.1.110"
+      "nginx"
     ]
   },
   "mc_friends": {
     "hosts": [
-      "192.168.1.113"
+      "mc-friends"
     ]
   },
   "_meta": {
     "hostvars": {
       "192.168.1.100": {
         "hostname": "head",
-        "adapter_mac": "36:ED:76:CF:EE:09",
-        "static_ip": "192.168.1.100"
+        "adapter_mac": "36:ED:76:CF:EE:09"
       }, 
       "192.168.1.101": {
         "hostname": "nfs",
-        "adapter_mac": "86:DF:7C:87:A1:79",
-        "static_ip": "192.168.1.101"
+        "adapter_mac": "86:DF:7C:87:A1:79"
       },
       "192.168.1.102": {
         "hostname": "plex",
-        "adapter_mac": "F2:52:7D:0C:30:29",
-        "static_ip": "192.168.1.102"
+        "adapter_mac": "F2:52:7D:0C:30:29"
       },
       "192.168.1.103": {
         "hostname": "docker",
-        "adapter_mac": "62:61:FF:EE:83:F8",
-        "static_ip": "192.168.1.103"
+        "adapter_mac": "62:61:FF:EE:83:F8"
       },
       "192.168.1.105": {
         "hostname": "openvpn",
-        "adapter_mac": "E2:4C:DC:46:57:55",
-        "static_ip": "192.168.1.105"
+        "adapter_mac": "E2:4C:DC:46:57:55"
       },
       "192.168.1.106": {
         "hostname": "seedbox",
-        "adapter_mac": "06:D4:B6:FD:57:AF",
-        "static_ip": "192.168.1.106"
+        "adapter_mac": "06:D4:B6:FD:57:AF"
       },
       "192.168.1.107": {
         "hostname": "playground",
-        "adapter_mac": "46:20:98:3F:1A:FB",
-        "static_ip": "192.168.1.107"
+        "adapter_mac": "46:20:98:3F:1A:FB"
       },
       "192.168.1.108": {
         "hostname": "nextcloud",
-        "adapter_mac": "66:6C:59:DC:64:1D",
-        "static_ip": "192.168.1.108"
+        "adapter_mac": "66:6C:59:DC:64:1D"
       },
       "192.168.1.110": {
         "hostname": "nginx",
-        "adapter_mac": "62:E6:11:BE:FF:F1",
-        "static_ip": "192.168.1.110"
+        "adapter_mac": "62:E6:11:BE:FF:F1"
       },
       "192.168.1.112": {
         "hostname": "mchoster",
-        "adapter_mac": "52:92:47:B9:C9:70",
-        "static_ip": "192.168.1.112"
+        "adapter_mac": "52:92:47:B9:C9:70"
       },
       "192.168.1.113": {
         "hostname": "mc-friends",
-        "adapter_mac": "DA:4E:AC:61:F4:BC",
-        "static_ip": "192.168.1.113"
+        "adapter_mac": "DA:4E:AC:61:F4:BC"
       }
     }
   }

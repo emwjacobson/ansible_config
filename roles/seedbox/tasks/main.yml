@@ -5,14 +5,14 @@
 - name: Make sure NFS Plex is mounted
   ansible.posix.mount:
     fstype: nfs
-    src: 192.168.1.101:/home/emerson/ext/Plex
+    src: nfs.emwj.lan:/home/emerson/ext/Plex
     path: /home/emerson/Plex
     opts: defaults
     state: mounted
 - name: Make sure NFS Storage is mounted
   ansible.posix.mount:
     fstype: nfs
-    src: 192.168.1.101:/home/emerson/ext/Storage
+    src: nfs.emwj.lan:/home/emerson/ext/Storage
     path: /home/emerson/Storage
     opts: defaults
     state: mounted

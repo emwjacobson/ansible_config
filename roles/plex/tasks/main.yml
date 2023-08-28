@@ -5,7 +5,7 @@
 - name: Make sure NFS is mounted
   ansible.posix.mount:
     fstype: nfs
-    src: 192.168.1.101:/home/emerson/ext/Plex
+    src: nfs.emwj.lan:/home/emerson/ext/Plex
     path: /home/emerson/nfs
     opts: defaults
     state: mounted

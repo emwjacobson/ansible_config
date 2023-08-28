@@ -1,62 +1,62 @@
 {
   "all": {
     "hosts": [
-      "head.emwj.local",
-      "nfs.emwj.local",
-      "plex.emwj.local",
-      "docker.emwj.local",
-      "openvpn.emwj.local",
-      "seedbox.emwj.local",
-      "playground.emwj.local",
-      "nextcloud.emwj.local",
-      "nginx.emwj.local",
-      "mchoster.emwj.local",
-      "mc-friends.emwj.local"
+      "head.emwj.lan",
+      "nfs.emwj.lan",
+      "plex.emwj.lan",
+      "docker.emwj.lan",
+      "openvpn.emwj.lan",
+      "seedbox.emwj.lan",
+      "playground.emwj.lan",
+      "nextcloud.emwj.lan",
+      "nginx.emwj.lan",
+      "mchoster.emwj.lan",
+      "mc-friends.emwj.lan"
     ]
   },
   "head": {
     "hosts": [
-      "head.emwj.local"
+      "head.emwj.lan"
     ]
   },
   "nfs": {
     "hosts": [
-      "nfs.emwj.local"
+      "nfs.emwj.lan"
     ]
   },
   "plex": {
     "hosts": [
-      "plex.emwj.local"
+      "plex.emwj.lan"
     ]
   },
   "docker": {
     "hosts": [
-      "docker.emwj.local"
+      "docker.emwj.lan"
     ]
   },
   "openvpn": {
     "hosts": [
-      "openvpn.emwj.local"
+      "openvpn.emwj.lan"
     ]
   },
   "seedbox": {
     "hosts": [
-      "seedbox.emwj.local"
+      "seedbox.emwj.lan"
     ]
   },
   "nextcloud": {
     "hosts": [
-      "nextcloud.emwj.local"
+      "nextcloud.emwj.lan"
     ]
   },
   "nginx": {
     "hosts": [
-      "nginx.emwj.local"
+      "nginx.emwj.lan"
     ]
   },
   "mc_friends": {
     "hosts": [
-      "mc-friends.emwj.local"
+      "mc-friends.emwj.lan"
     ]
   },
   "_meta": {

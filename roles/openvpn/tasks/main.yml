@@ -1,4 +1,4 @@
-- name: Make sure OpenVPN is running
+- name: Make sure Tailscale is running
   ansible.builtin.systemd:
     state: started
-    name: openvpn
+    name: tailscaled

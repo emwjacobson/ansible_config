@@ -76,3 +76,6 @@
         delay: 10
         state: started
         connect_timeout: 30
+- name: Vacuum Logs
+  ansible.builtin.command:
+    cmd: journalctl --vacuum-time=2d

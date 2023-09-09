@@ -9,9 +9,7 @@
       "seedbox.emwj.lan",
       "playground.emwj.lan",
       "nextcloud.emwj.lan",
-      "nginx.emwj.lan",
-      "mchoster.emwj.lan",
-      "mc-friends.emwj.lan"
+      "nginx.emwj.lan"
     ]
   },
   "head": {
@@ -54,11 +52,6 @@
       "nginx.emwj.lan"
     ]
   },
-  "mc_friends": {
-    "hosts": [
-      "mc-friends.emwj.lan"
-    ]
-  },
   "_meta": {
     "hostvars": {
       "head.emwj.lan": {
@@ -96,14 +89,6 @@
       "nginx.emwj.lan": {
         "hostname": "nginx",
         "adapter_mac": "62:E6:11:BE:FF:F1"
-      },
-      "mchoster.emwj.lan": {
-        "hostname": "mchoster",
-        "adapter_mac": "52:92:47:B9:C9:70"
-      },
-      "mc-friends.emwj.lan": {
-        "hostname": "mc-friends",
-        "adapter_mac": "DA:4E:AC:61:F4:BC"
       }
     }
   }

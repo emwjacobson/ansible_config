@@ -20,3 +20,10 @@
     project_src: /home/emerson/kanboard/
     project_name: kanboard
     state: present
+- name: Make sure NFS is mounted
+  ansible.posix.mount:
+    fstype: nfs
+    src: nfs.emwj.lan:/home/emerson/ext/Storage
+    path: /mnt
+    opts: defaults
+    state: mounted

@@ -44,17 +44,28 @@
     dest: /home/emerson/.config/nvim/init.vim
     owner: emerson
     group: emerson
-- name: Add neovim alias
+- name: Configure Bashrc
   ansible.builtin.blockinfile:
     path: /home/emerson/.bashrc
     create: true
     owner: emerson
     group: emerson
     insertbefore: BOF
-    marker: '# {mark} ANSIBLE MANAGED BLOCK - neovim'
+    marker: '# {mark} ANSIBLE MANAGED BLOCK'
     state: present
     block: |
       alias vim=nvim
+      exit_color() {    
+        X=$?    
+        if [[ $X == 0 ]]; then    
+          echo -e "\e[46m"    
+        else    
+          echo -e "\e[41m"    
+        fi    
+        return $X    
+      }    
+      export PS1='$(exit_color) $? \[\e[44m\] \w \[\e[0m\]    
+      \[\e[1;32m\]\u ¤ \[\e[0m\]\[\e[0;30m\]\[\e[47m\]\h\[\e[0m\] \[\e[1;34m\]\W\[\e[1;32m\] »\[\e[0m\] '
 - name: Apply Systemd Network Config
   block:
     # https://serverfault.com/a/1123452

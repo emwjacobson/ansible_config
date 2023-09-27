@@ -50,24 +50,6 @@
     dest: /home/emerson/.bashrc
     owner: emerson
     group: emerson
-- name: Configure Bashrc
-  ansible.builtin.blockinfile:
-    path: /home/emerson/.bashrc
-    create: true
-    owner: emerson
-    group: emerson
-    insertbefore: BOF
-    marker: '# {mark} ANSIBLE MANAGED BLOCK'
-    state: absent
-- name: Configure Bashrc
-  ansible.builtin.blockinfile:
-    path: /home/emerson/.bashrc
-    create: true
-    owner: emerson
-    group: emerson
-    insertbefore: BOF
-    marker: '# {mark} ANSIBLE MANAGED BLOCK - neovim'
-    state: absent
 - name: Apply Systemd Network Config
   block:
     # https://serverfault.com/a/1123452

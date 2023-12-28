@@ -15,11 +15,6 @@
     project_src: /home/emerson/CLU/
     project_name: clu
     state: present
-- name: Make sure Kanboard is running
-  community.docker.docker_compose:
-    project_src: /home/emerson/kanboard/
-    project_name: kanboard
-    state: present
 - name: Make sure NFS is mounted
   ansible.posix.mount:
     fstype: nfs

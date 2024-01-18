@@ -7,22 +7,10 @@
   hosts: head
   roles:
     - head
-- name: NFS
-  hosts: nfs
-  roles:
-    - nfs
-- name: Plex
-  hosts: plex
-  roles:
-    - plex
 - name: OpenVPN
   hosts: openvpn
   roles:
     - openvpn
-- name: Seedbox
-  hosts: seedbox
-  roles:
-    - seedbox
 - name: Nextcloud
   hosts: nextcloud
   roles:

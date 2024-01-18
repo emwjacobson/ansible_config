@@ -2,11 +2,8 @@
   "all": {
     "hosts": [
       "head.emwj.lan",
-      "nfs.emwj.lan",
-      "plex.emwj.lan",
       "docker.emwj.lan",
       "openvpn.emwj.lan",
-      "seedbox.emwj.lan",
       "playground.emwj.lan",
       "nextcloud.emwj.lan",
       "nginx.emwj.lan"
@@ -17,16 +14,6 @@
       "head.emwj.lan"
     ]
   },
-  "nfs": {
-    "hosts": [
-      "nfs.emwj.lan"
-    ]
-  },
-  "plex": {
-    "hosts": [
-      "plex.emwj.lan"
-    ]
-  },
   "docker": {
     "hosts": [
       "docker.emwj.lan"
@@ -35,11 +22,6 @@
   "openvpn": {
     "hosts": [
       "openvpn.emwj.lan"
-    ]
-  },
-  "seedbox": {
-    "hosts": [
-      "seedbox.emwj.lan"
     ]
   },
   "nextcloud": {
@@ -58,14 +40,6 @@
         "hostname": "head",
         "adapter_mac": "36:ED:76:CF:EE:09"
       }, 
-      "nfs.emwj.lan": {
-        "hostname": "nfs",
-        "adapter_mac": "86:DF:7C:87:A1:79"
-      },
-      "plex.emwj.lan": {
-        "hostname": "plex",
-        "adapter_mac": "F2:52:7D:0C:30:29"
-      },
       "docker.emwj.lan": {
         "hostname": "docker",
         "adapter_mac": "62:61:FF:EE:83:F8"
@@ -73,10 +47,6 @@
       "openvpn.emwj.lan": {
         "hostname": "openvpn",
         "adapter_mac": "E2:4C:DC:46:57:55"
-      },
-      "seedbox.emwj.lan": {
-        "hostname": "seedbox",
-        "adapter_mac": "06:D4:B6:FD:57:AF"
       },
       "playground.emwj.lan": {
         "hostname": "playground",

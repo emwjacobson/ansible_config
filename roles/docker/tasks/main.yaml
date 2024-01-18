@@ -1,10 +1,3 @@
-- name: Make sure NFS is mounted
-  ansible.posix.mount:
-    fstype: nfs
-    src: nfs.emwj.lan:/home/emerson/ext/Storage
-    path: /mnt
-    opts: defaults
-    state: mounted
 - name: Make sure portfolio is running
   community.docker.docker_compose:
     project_src: /home/emerson/emwj.dev/

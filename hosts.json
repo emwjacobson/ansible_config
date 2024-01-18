@@ -6,7 +6,8 @@
       "openvpn.emwj.lan",
       "playground.emwj.lan",
       "nextcloud.emwj.lan",
-      "nginx.emwj.lan"
+      "nginx.emwj.lan",
+      "rust.emwj.lan"
     ]
   },
   "head": {
@@ -34,6 +35,11 @@
       "nginx.emwj.lan"
     ]
   },
+  "rust": {
+    "hosts": [
+      "rust.emwj.lan"
+    ]
+  },
   "_meta": {
     "hostvars": {
       "head.emwj.lan": {
@@ -59,6 +65,10 @@
       "nginx.emwj.lan": {
         "hostname": "nginx",
         "adapter_mac": "62:E6:11:BE:FF:F1"
+      },
+      "rust.emwj.lan": {
+        "hostname": "rust",
+        "adapter_mac": "BC:24:11:7F:0C:ED"
       }
     }
   }

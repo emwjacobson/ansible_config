@@ -7,7 +7,7 @@
       "playground.emwj.lan",
       "nextcloud.emwj.lan",
       "nginx.emwj.lan",
-      "rust.emwj.lan"
+      "palworld.emwj.lan"
     ]
   },
   "head": {
@@ -35,9 +35,9 @@
       "nginx.emwj.lan"
     ]
   },
-  "rust": {
+  "palworld": {
     "hosts": [
-      "rust.emwj.lan"
+      "palworld.emwj.lan"
     ]
   },
   "_meta": {
@@ -66,9 +66,9 @@
         "hostname": "nginx",
         "adapter_mac": "62:E6:11:BE:FF:F1"
       },
-      "rust.emwj.lan": {
-        "hostname": "rust",
-        "adapter_mac": "BC:24:11:7F:B1:61"
+      "palworld.emwj.lan": {
+        "hostname": "palworld",
+        "adapter_mac": "BC:24:11:7F:FE:39"
       }
     }
   }

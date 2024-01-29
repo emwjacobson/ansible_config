@@ -1,25 +1,31 @@
 ---
 - name: Common
+  ignore_unreachable: true
   hosts: all
   roles:
     - common
 - name: Head
+  ignore_unreachable: true
   hosts: head
   roles:
     - head
 - name: OpenVPN
+  ignore_unreachable: true
   hosts: openvpn
   roles:
     - openvpn
 - name: Nextcloud
+  ignore_unreachable: true
   hosts: nextcloud
   roles:
     - nextcloud
 - name: Nginx
+  ignore_unreachable: true
   hosts: nginx
   roles:
     - nginx
 - name: Docker
+  ignore_unreachable: true
   hosts: docker
   roles:
     - docker

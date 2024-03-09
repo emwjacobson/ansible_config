@@ -6,8 +6,7 @@
       "openvpn.emwj.lan",
       "playground.emwj.lan",
       "nextcloud.emwj.lan",
-      "nginx.emwj.lan",
-      "palworld.emwj.lan"
+      "nginx.emwj.lan"
     ]
   },
   "head": {
@@ -35,11 +34,6 @@
       "nginx.emwj.lan"
     ]
   },
-  "palworld": {
-    "hosts": [
-      "palworld.emwj.lan"
-    ]
-  },
   "_meta": {
     "hostvars": {
       "head.emwj.lan": {
@@ -65,10 +59,6 @@
       "nginx.emwj.lan": {
         "hostname": "nginx",
         "adapter_mac": "62:E6:11:BE:FF:F1"
-      },
-      "palworld.emwj.lan": {
-        "hostname": "palworld",
-        "adapter_mac": "BC:24:11:7F:FE:39"
       }
     }
   }

@@ -12,6 +12,7 @@ IP=$(hostname --all-ip-addresses | grep -Eio "10.2.*")
 mkdir -p $KEY_FOLDER
 echo $KEY >> $KEY_FOLDER/authorized_keys
 
-echo "DO NOT FORGET TO TRACK THIS MACHINE WITH ANSIBLE!"
+echo "Do not forget to track this machine with Ansible!"
+echo "Also enabling QEMU Guest Agent and CPU NUMA."
 echo $IP
 

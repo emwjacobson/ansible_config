@@ -4,6 +4,11 @@
   hosts: all
   roles:
     - common
+- name: VMs
+  ignore_unreachable: true
+  hosts: vms
+  roles:
+    - vms
 - name: Head
   ignore_unreachable: true
   hosts: head

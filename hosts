@@ -1,3 +1,20 @@
-#!/bin/sh
+[head]
+head.emwj.lan hostname=head adapter_mac=36:ED:76:CF:EE:09
 
-curl -s https://raw.githubusercontent.com/emwjacobson/ansible_config/main/hosts.json &> /dev/stdout
+[docker]
+docker.emwj.lan hostname=docker adapter_mac=62:61:FF:EE:83:F8
+
+[openvpn]
+openvpn.emwj.lan hostname=openvpn adapter_mac=E2:4C:DC:46:57:55
+
+[playground]
+playground.emwj.lan hostname=playground adapter_mac=46:20:98:3F:1A:FB
+
+[nextcloud]
+nextcloud.emwj.lan hostname=nextcloud adapter_mac=66:6C:59:DC:64:1D
+
+[nginx]
+nginx.emwj.lan hostname=nginx adapter_mac=62:E6:11:BE:FF:F1
+
+[plex]
+plex.emwj.lan hostname=plex adapter_mac=BC:24:11:4D:22:FE

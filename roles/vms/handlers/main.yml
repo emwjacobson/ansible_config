@@ -1,3 +1,5 @@
 ---
-- name: Reload Networkctl
-  ansible.builtin.shell: networkctl reload
+- name: Restart rsyslog
+  ansible.builtin.systemd:
+    name: rsyslog
+    state: restarted

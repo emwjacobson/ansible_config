@@ -21,6 +21,7 @@
       - neovim
       - qemu-guest-agent
       - nfs-common
+      - rsyslog
 - name: Upgrade packages
   ansible.builtin.apt:
     name: "*"
@@ -81,3 +82,10 @@
 - name: Vacuum Logs
   ansible.builtin.command:
     cmd: journalctl --vacuum-time=2d
+- name: Copy rsyslog Config
+  ansible.builtin.copy:
+    src: 01-client.conf
+    dest: /etc/rsyslog.d/01-client.conf
+    owner: root
+    group: root
+  notify: Restart rsyslog

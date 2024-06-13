@@ -27,3 +27,8 @@ playground
 nextcloud
 nginx
 plex
+
+[proxmox]
+pm01.emwj.lan
+pm02.emwj.lan
+pm04.emwj.lan

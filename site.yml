@@ -4,6 +4,11 @@
   hosts: all
   roles:
     - common
+- name: Proxmox
+  ignore_unreachable: true
+  hosts: proxmox
+  roles:
+    - proxmox
 - name: VMs
   ignore_unreachable: true
   hosts: vms

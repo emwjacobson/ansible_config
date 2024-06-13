@@ -1,0 +1,8 @@
+---
+- name: Install Proxmox packages
+  ansible.builtin.apt:
+    state: present
+    package:
+      - sudo
+      - vim
+      - rsyslog

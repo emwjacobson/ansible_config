@@ -3,7 +3,7 @@
     project_src: /home/emerson/emwj.dev/
     project_name: portfolio
     state: present
-    build: always
+    build: policy
     files: docker-compose-prod.yml
 - name: Make sure cloudflare-ddns is running
   community.docker.docker_compose_v2:

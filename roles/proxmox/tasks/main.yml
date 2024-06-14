@@ -6,6 +6,7 @@
       - sudo
       - vim
       - rsyslog
+      - rsyslog-gnutls
 - name: Copy rsyslog Config
   ansible.builtin.copy:
     src: 01-client.conf
@@ -13,3 +14,16 @@
     owner: root
     group: root
   notify: Restart rsyslog
+- name: Ensure certs folder exists
+  ansible.builtin.file:
+    path: /etc/ssl/certs/rsyslog
+    state: directory
+    recurse: true
+    owner: root
+    group: root
+- name: Copy rsyslog CA cert
+  ansible.builtin.copy:
+    src: ca.pem
+    dest: /etc/ssl/certs/rsyslog/ca.pem
+    owner: root
+    group: root

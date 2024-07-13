@@ -39,3 +39,8 @@
   hosts: docker
   roles:
     - docker
+- name: Swarm
+  ignore_unreachable: true
+  hosts: swarm
+  roles:
+    - swarm

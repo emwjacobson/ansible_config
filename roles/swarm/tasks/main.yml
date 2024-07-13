@@ -1,0 +1,8 @@
+---
+- name: Mount NFS
+  ansible.posix.mount:
+    src: nas.emwj.lan:/Swarm
+    path: /mnt/swarm
+    opts: rw,sync
+    state: mounted
+    fstype: nfs

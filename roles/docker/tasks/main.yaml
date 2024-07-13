@@ -5,11 +5,11 @@
     state: present
     build: policy
     files: docker-compose-prod.yml
-- name: Make sure cloudflare-ddns is running
-  community.docker.docker_compose_v2:
-    project_src: /home/emerson/cloudflare-ddns/
-    project_name: cloudflare-ddns
-    state: present
+#- name: Make sure cloudflare-ddns is running
+#  community.docker.docker_compose_v2:
+#    project_src: /home/emerson/cloudflare-ddns/
+#    project_name: cloudflare-ddns
+#    state: present
 - name: Make sure CLU is running
   community.docker.docker_compose_v2:
     project_src: /home/emerson/CLU/

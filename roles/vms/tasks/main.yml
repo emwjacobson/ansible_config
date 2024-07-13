@@ -52,6 +52,7 @@
     state: started
     enabled: true
     name: qemu-guest-agent
+  when: not ansible_check_mode
 - name: Copy bashrc
   ansible.builtin.copy:
     src: .bashrc

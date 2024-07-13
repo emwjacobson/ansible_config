@@ -4,6 +4,12 @@ head.emwj.lan hostname=head adapter_mac=36:ED:76:CF:EE:09
 [docker]
 docker.emwj.lan hostname=docker adapter_mac=62:61:FF:EE:83:F8
 
+[swarm]
+swarm0.emwj.lan hostname=swarm0 adapter_mac=BC:24:11:96:7D:F5
+swarm1.emwj.lan hostname=swarm1 adapter_mac=BC:24:11:39:85:FB
+swarm2.emwj.lan hostname=swarm2 adapter_mac=BC:24:11:BC:FC:75
+swarm3.emwj.lan hostname=swarm3 adapter_mac=BC:24:11:CD:FB:30
+
 [openvpn]
 openvpn.emwj.lan hostname=openvpn adapter_mac=E2:4C:DC:46:57:55
 
@@ -22,6 +28,7 @@ plex.emwj.lan hostname=plex adapter_mac=BC:24:11:4D:22:FE
 [vms:children]
 head
 docker
+swarm
 openvpn
 playground
 nextcloud
@@ -31,4 +38,5 @@ plex
 [proxmox]
 pm01.emwj.lan
 pm02.emwj.lan
+pm03.emwj.lan
 pm04.emwj.lan

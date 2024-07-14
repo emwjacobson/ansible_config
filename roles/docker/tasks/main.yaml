@@ -15,16 +15,16 @@
 #    project_src: /home/emerson/CLU/
 #    project_name: clu
 #    state: present
-- name: Make sure arr suite is running
-  community.docker.docker_compose_v2:
-    project_src: /home/emerson/arr/
-    project_name: arr
-    state: present
-- name: Make sure syncthing is running
-  community.docker.docker_compose_v2:
-    project_src: /home/emerson/syncthing/
-    project_name: syncthing
-    state: present
+#- name: Make sure arr suite is running
+#  community.docker.docker_compose_v2:
+#    project_src: /home/emerson/arr/
+#    project_name: arr
+#    state: present
+#- name: Make sure syncthing is running
+#  community.docker.docker_compose_v2:
+#    project_src: /home/emerson/syncthing/
+#    project_name: syncthing
+#    state: present
 #- name: Make sure homarr is running
 #  community.docker.docker_compose_v2:
 #    project_src: /home/emerson/homarr/

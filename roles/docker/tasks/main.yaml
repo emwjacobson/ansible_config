@@ -1,20 +1,20 @@
-- name: Make sure portfolio is running
-  community.docker.docker_compose_v2:
-    project_src: /home/emerson/emwj.dev/
-    project_name: portfolio
-    state: present
-    build: policy
-    files: docker-compose-prod.yml
+#- name: Make sure portfolio is running
+#  community.docker.docker_compose_v2:
+#    project_src: /home/emerson/emwj.dev/
+#    project_name: portfolio
+#    state: present
+#    build: policy
+#    files: docker-compose-prod.yml
 #- name: Make sure cloudflare-ddns is running
 #  community.docker.docker_compose_v2:
 #    project_src: /home/emerson/cloudflare-ddns/
 #    project_name: cloudflare-ddns
 #    state: present
-- name: Make sure CLU is running
-  community.docker.docker_compose_v2:
-    project_src: /home/emerson/CLU/
-    project_name: clu
-    state: present
+#- name: Make sure CLU is running
+#  community.docker.docker_compose_v2:
+#    project_src: /home/emerson/CLU/
+#    project_name: clu
+#    state: present
 - name: Make sure arr suite is running
   community.docker.docker_compose_v2:
     project_src: /home/emerson/arr/
@@ -25,11 +25,11 @@
     project_src: /home/emerson/syncthing/
     project_name: syncthing
     state: present
-- name: Make sure homarr is running
-  community.docker.docker_compose_v2:
-    project_src: /home/emerson/homarr/
-    project_name: homarr
-    state: present
+#- name: Make sure homarr is running
+#  community.docker.docker_compose_v2:
+#    project_src: /home/emerson/homarr/
+#    project_name: homarr
+#    state: present
 - name: Make sure graylog is running
   community.docker.docker_compose_v2:
     project_src: /home/emerson/graylog/

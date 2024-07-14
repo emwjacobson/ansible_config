@@ -30,8 +30,8 @@
 #    project_src: /home/emerson/homarr/
 #    project_name: homarr
 #    state: present
-- name: Make sure graylog is running
-  community.docker.docker_compose_v2:
-    project_src: /home/emerson/graylog/
-    project_name: graylog
-    state: present
+#- name: Make sure graylog is running
+#  community.docker.docker_compose_v2:
+#    project_src: /home/emerson/graylog/
+#    project_name: graylog
+#    state: present

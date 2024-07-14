@@ -3,13 +3,13 @@
   ansible.posix.mount:
     src: nas.emwj.lan:/Swarm
     path: /mnt/swarm
-    opts: rw,sync
+    opts: defaults,user
     state: mounted
     fstype: nfs
 - name: Mount NFS
   ansible.posix.mount:
     src: nas.emwj.lan:/Plex
     path: /mnt/Plex
-    opts: rw,sync,defaults,user
+    opts: defaults,user
     state: mounted
     fstype: nfs

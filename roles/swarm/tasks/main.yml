@@ -3,7 +3,7 @@
   ansible.posix.mount:
     src: nas.emwj.lan:/Swarm
     path: /mnt/swarm
-    opts: defaults,user
+    opts: defaults,user,nolock
     state: mounted
     fstype: nfs
 - name: Mount NFS

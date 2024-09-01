@@ -1,0 +1,32 @@
+---
+- name: Install nut-client package
+  ansible.builtin.apt:
+    name: nut-client
+    state: present
+    update_cache: yes
+- name: Copy NUT config files
+  ansible.builtin.copy:
+    src: "files/nut/{{ item }}"
+    dest: "/etc/nut/{{ item }}"
+    owner: root
+    group: nut
+    mode: '0640'
+  with_items:
+    - nut.conf
+    - upsmon.conf
+    - upssched.conf
+  notify:
+    - Reload nut-client
+    - Reload nut-monitor
+- name: Copy NUT executable
+  ansible.builtin.copy:
+    src: "files/nut/{{ item }}"
+    dest: "/etc/nut/{{ item }}"
+    owner: root
+    group: nut
+    mode: '0750'
+  with_items:
+    - upssched-cmd
+  notify:
+    - Reload nut-client
+    - Reload nut-monitor

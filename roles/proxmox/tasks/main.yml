@@ -27,3 +27,5 @@
     dest: /etc/ssl/certs/rsyslog/ca.pem
     owner: root
     group: root
+
+- include_tasks: nut.yml

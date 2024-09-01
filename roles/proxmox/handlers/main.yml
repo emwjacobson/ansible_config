@@ -3,3 +3,11 @@
   ansible.builtin.systemd:
     name: rsyslog
     state: restarted
+- name: Reload nut-client
+  ansible.builtin.systemd:
+    name: nut-client
+    state: reloaded
+- name: Reload nut-monitor
+  ansible.builtin.systemd:
+    name: nut-monitor
+    state: reloaded

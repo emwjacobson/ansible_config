@@ -7,3 +7,4 @@
 - name: Vacuum Logs
   ansible.builtin.command:
     cmd: journalctl --vacuum-time=2d
+  changed_when: false

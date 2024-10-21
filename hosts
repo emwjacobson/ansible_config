@@ -25,6 +25,9 @@ nginx.emwj.lan hostname=nginx adapter_mac=62:E6:11:BE:FF:F1
 [plex]
 plex.emwj.lan hostname=plex adapter_mac=BC:24:11:4D:22:FE
 
+[pihole]
+pihole.emwj.lan hostname=pihole adapter_mac=BC:24:11:2A:EB:4A
+
 [vms:children]
 head
 docker
@@ -34,6 +37,7 @@ playground
 nextcloud
 nginx
 plex
+pihole
 
 [proxmox]
 pm01.emwj.lan

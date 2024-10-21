@@ -62,28 +62,6 @@
     dest: /home/emerson/.bashrc
     owner: emerson
     group: emerson
-- name: Apply Systemd Network Config
-  block:
-    # https://serverfault.com/a/1123452
-    - name: Add network config template
-      ansible.builtin.template:
-        src: 10-ethernet.network.j2
-        dest: /etc/systemd/network/10-ethernet.network
-    - name: Reload Networkctl
-      ansible.builtin.shell: networkctl reload &
-      args:
-        executable: /bin/bash
-      async: 100
-      poll: 0
-    - name: Wait for SSH to restart
-      local_action:
-        module: wait_for
-        host: "{{ inventory_hostname }}"
-        port: 22
-        delay: 10
-        state: started
-        timeout: 30
-  when: not ansible_check_mode
 - name: Vacuum Logs
   ansible.builtin.command:
     cmd: journalctl --vacuum-time=2d

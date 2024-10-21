@@ -1,32 +1,45 @@
 [head]
-head.emwj.lan hostname=head adapter_mac=36:ED:76:CF:EE:09
+head.emwj.lan hostname=head adapter_mac=36:ED:76:CF:EE:09 distro=ubuntu distro_ver=22.04
 
 [docker]
-docker.emwj.lan hostname=docker adapter_mac=62:61:FF:EE:83:F8
+docker.emwj.lan hostname=docker adapter_mac=62:61:FF:EE:83:F8 distro=ubuntu distro_ver=22.04
 
 [swarm]
-swarm0.emwj.lan hostname=swarm0 adapter_mac=BC:24:11:96:7D:F5
-swarm1.emwj.lan hostname=swarm1 adapter_mac=BC:24:11:39:85:FB
-swarm2.emwj.lan hostname=swarm2 adapter_mac=BC:24:11:BC:FC:75
-swarm3.emwj.lan hostname=swarm3 adapter_mac=BC:24:11:CD:FB:30
+swarm0.emwj.lan hostname=swarm0 adapter_mac=BC:24:11:96:7D:F5 distro=ubuntu distro_ver=22.04
+swarm1.emwj.lan hostname=swarm1 adapter_mac=BC:24:11:39:85:FB distro=ubuntu distro_ver=22.04
+swarm2.emwj.lan hostname=swarm2 adapter_mac=BC:24:11:BC:FC:75 distro=ubuntu distro_ver=22.04
+swarm3.emwj.lan hostname=swarm3 adapter_mac=BC:24:11:CD:FB:30 distro=ubuntu distro_ver=22.04
 
 [openvpn]
-openvpn.emwj.lan hostname=openvpn adapter_mac=E2:4C:DC:46:57:55
+openvpn.emwj.lan hostname=openvpn adapter_mac=E2:4C:DC:46:57:55 distro=ubuntu distro_ver=22.04
 
 [playground]
-playground.emwj.lan hostname=playground adapter_mac=46:20:98:3F:1A:FB
+playground.emwj.lan hostname=playground adapter_mac=46:20:98:3F:1A:FB distro=ubuntu distro_ver=22.04
 
 [nextcloud]
-nextcloud.emwj.lan hostname=nextcloud adapter_mac=66:6C:59:DC:64:1D
+nextcloud.emwj.lan hostname=nextcloud adapter_mac=66:6C:59:DC:64:1D distro=ubuntu distro_ver=22.04
 
 [nginx]
-nginx.emwj.lan hostname=nginx adapter_mac=62:E6:11:BE:FF:F1
+nginx.emwj.lan hostname=nginx adapter_mac=62:E6:11:BE:FF:F1 distro=ubuntu distro_ver=22.04
 
 [plex]
-plex.emwj.lan hostname=plex adapter_mac=BC:24:11:4D:22:FE
+plex.emwj.lan hostname=plex adapter_mac=BC:24:11:4D:22:FE distro=ubuntu distro_ver=22.04
 
 [pihole]
-pihole.emwj.lan hostname=pihole adapter_mac=BC:24:11:2A:EB:4A
+pihole.emwj.lan hostname=pihole adapter_mac=BC:24:11:2A:EB:4A distro=ubuntu distro_ver=22.04
+
+[frigate]
+frigate.emwj.lan hostname=frigate
+
+[proxmox]
+pm01.emwj.lan
+pm02.emwj.lan
+pm03.emwj.lan
+pm04.emwj.lan
+
+[proxmox:vars]
+distro=debian
+distro_ver=12
 
 [vms:children]
 head
@@ -39,8 +52,3 @@ nginx
 plex
 pihole
 
-[proxmox]
-pm01.emwj.lan
-pm02.emwj.lan
-pm03.emwj.lan
-pm04.emwj.lan

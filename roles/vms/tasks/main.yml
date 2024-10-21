@@ -23,6 +23,9 @@
       - nfs-common
       - rsyslog
       - rsyslog-gnutls
+      - curl
+      - sudo
+      - vim
 - name: Upgrade packages
   ansible.builtin.apt:
     name: "*"

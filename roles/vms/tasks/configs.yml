@@ -1,0 +1,27 @@
+---
+- name: Ensure .config folder exists
+  ansible.builtin.file:
+    path: /home/emerson/.config
+    state: directory
+    recurse: true
+    owner: emerson
+    group: emerson
+- name: Ensure neovim config folder exists
+  ansible.builtin.file:
+    path: /home/emerson/.config/nvim
+    state: directory
+    recurse: true
+    owner: emerson
+    group: emerson
+- name: Copy Neovim config
+  ansible.builtin.copy:
+    src: neovim.conf
+    dest: /home/emerson/.config/nvim/init.vim
+    owner: emerson
+    group: emerson
+- name: Copy bashrc
+  ansible.builtin.copy:
+    src: .bashrc
+    dest: /home/emerson/.bashrc
+    owner: emerson
+    group: emerson

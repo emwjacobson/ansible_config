@@ -1,0 +1,24 @@
+---
+- name: Install Packages
+  ansible.builtin.apt:
+    state: present
+    update_cache: true
+    package:
+      - neovim
+      - qemu-guest-agent
+      - nfs-common
+      - rsyslog
+      - rsyslog-gnutls
+      - curl
+      - sudo
+      - vim
+- name: Upgrade packages
+  ansible.builtin.apt:
+    name: "*"
+    state: latest
+- name: Make sure qemu guest agent is running
+  ansible.builtin.systemd:
+    state: started
+    enabled: true
+    name: qemu-guest-agent
+  when: not ansible_check_mode

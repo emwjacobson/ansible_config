@@ -1,11 +1,10 @@
 ---
-- name: Install Packages
+- name: Install VM Packages
   ansible.builtin.apt:
     state: present
     update_cache: true
     package:
       - qemu-guest-agent
-      - nfs-common
 - name: Upgrade packages
   ansible.builtin.apt:
     name: "*"

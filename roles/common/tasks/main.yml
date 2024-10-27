@@ -2,3 +2,5 @@
 - name: Set Timezone
   community.general.timezone:
     name: America/Los_Angeles
+- include_tasks: users.yml
+- include_tasks: packages.yml

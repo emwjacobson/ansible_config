@@ -1,8 +1,8 @@
 [head]
 head.emwj.lan
 
-[docker]
-docker.emwj.lan
+#[docker]
+#docker.emwj.lan
 
 [swarm]
 swarm0.emwj.lan
@@ -43,7 +43,7 @@ distro_ver=12
 
 [ubuntu:children]
 head
-docker
+#docker
 swarm
 openvpn
 playground
@@ -65,7 +65,7 @@ distro_ver=12
 
 [vms:children]
 head
-docker
+#docker
 swarm
 openvpn
 playground
@@ -73,5 +73,4 @@ nextcloud
 nginx
 plex
 pihole
-frigate
 

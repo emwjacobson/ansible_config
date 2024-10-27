@@ -1,5 +1,16 @@
 ---
-- name: Add Laptop emerson SSH Key
+- name: Make sure sudo group exists
+  ansible.builtin.group:
+    name: sudo
+    state: present
+- name: Add emerson user
+  ansible.builtin.user:
+    name: emerson
+    shell: /bin/bash
+    groups: sudo
+    append: yes
+    password: "$6$kI8Fi4F01xKugIjg$vgc2kWihrrXKBy3TnOjZWfMNAd/Mk3M0uPSF3I/i6aNYDqL3BqZmBqgHdKQKdgpYEQqBGVIzvNkC00x7hsIqS/"
+- name: Add laptop SSH key
   ansible.posix.authorized_key:
     user: emerson
     path: /home/emerson/.ssh/authorized_keys
@@ -13,4 +24,3 @@
     state: present
     key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCy8zssp4puS8QgkgZPXktHk5Ds6Ai68tE0pHPEjODiJ6HzjnyV6Hls7emesEvU6FdOw8jZQkdOca+NJ5dTuIaZUvgXZ2GqRiAF6JeZ/UG5ZHrAsRQfI5iMsSzzij1TNlwMwSpn83HKAcfb63K0DXf/r0MIvZqYzDlDmwK3DKEEK6Qcmm4m2O19EtDY50oT3C6qkdIW1ybgk1SCq8ZU5VlGRqyQ/SGI/jGT3GCNGENtoUtfH6px+kuNPUuhawNdCIXTh1eKHpv0vw4cZcxLo8RUrUSpLX7f83Aih22CJ4pa++l83UFNlPLSR5VP+C11FadiCtNUV2Euh5Er1J4lOavzAZHhU825hz4YdyItSC2cVdHEQx0I29cgI6iFOCavEQin9EobcxUqS447j9wU3fwr/ZpMQ/uYQxQwByI0FSbjZn5w65DWs8abuNpth+ohdsftigq+/yRRDMx/I9mRKIrM1RRmo1Tcwv8ul2Gm0wjC2qA9ij+AOdNFmKKgKj/bx3E="
     comment: "emerson@head"
-

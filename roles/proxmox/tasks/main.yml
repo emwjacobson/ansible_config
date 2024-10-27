@@ -1,12 +1,4 @@
 ---
-- name: Install Proxmox packages
-  ansible.builtin.apt:
-    state: present
-    package:
-      - sudo
-      - vim
-      - rsyslog
-      - rsyslog-gnutls
 - name: Copy rsyslog Config
   ansible.builtin.copy:
     src: 01-client.conf

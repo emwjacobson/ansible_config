@@ -1,0 +1,11 @@
+---
+- name: Install common packages
+  ansible.builtin.apt:
+    state: present
+    update_cache: true
+    package:
+      - rsyslog
+      - rsyslog-gnutls
+      - curl
+      - sudo
+      - vim

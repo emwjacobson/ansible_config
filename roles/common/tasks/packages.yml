@@ -4,6 +4,7 @@
     state: present
     update_cache: true
     package:
+      - neovim
       - rsyslog
       - rsyslog-gnutls
       - curl

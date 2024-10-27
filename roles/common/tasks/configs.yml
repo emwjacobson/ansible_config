@@ -21,7 +21,7 @@
     group: emerson
 - name: Copy bashrc
   ansible.builtin.copy:
-    src: .bashrc
+    src: bashrc
     dest: /home/emerson/.bashrc
     owner: emerson
     group: emerson

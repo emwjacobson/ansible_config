@@ -4,7 +4,6 @@
     state: present
     update_cache: true
     package:
-      - neovim
       - qemu-guest-agent
       - nfs-common
 - name: Upgrade packages

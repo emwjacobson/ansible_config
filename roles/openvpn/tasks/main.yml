@@ -1,4 +1,0 @@
-- name: Make sure Tailscale is running
-  ansible.builtin.systemd:
-    state: started
-    name: tailscaled

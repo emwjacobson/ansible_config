@@ -10,14 +10,8 @@ swarm1.emwj.lan
 swarm2.emwj.lan
 swarm3.emwj.lan
 
-[openvpn]
-openvpn.emwj.lan
-
 [playground]
 playground.emwj.lan
-
-[nextcloud]
-nextcloud.emwj.lan
 
 [nginx]
 nginx.emwj.lan
@@ -36,6 +30,8 @@ pm01.emwj.lan
 pm02.emwj.lan
 pm03.emwj.lan
 pm04.emwj.lan
+pm05.emwj.lan
+pm06.emwj.lan
 
 [proxmox:vars]
 distro=debian
@@ -45,9 +41,7 @@ distro_ver=12
 head
 #docker
 swarm
-openvpn
 playground
-nextcloud
 nginx
 plex
 pihole
@@ -67,9 +61,7 @@ distro_ver=12
 head
 #docker
 swarm
-openvpn
 playground
-nextcloud
 nginx
 plex
 pihole

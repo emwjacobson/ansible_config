@@ -19,16 +19,6 @@
   hosts: head
   roles:
     - head
-- name: OpenVPN
-  ignore_unreachable: true
-  hosts: openvpn
-  roles:
-    - openvpn
-- name: Nextcloud
-  ignore_unreachable: true
-  hosts: nextcloud
-  roles:
-    - nextcloud
 - name: Nginx
   ignore_unreachable: true
   hosts: nginx

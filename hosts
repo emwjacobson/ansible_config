@@ -26,12 +26,12 @@ pihole.emwj.lan
 frigate.emwj.lan
 
 [proxmox]
-pm01.emwj.lan
-pm02.emwj.lan
-pm03.emwj.lan
-pm04.emwj.lan
-pm05.emwj.lan
-pm06.emwj.lan
+pm01.emwj.lan cpu_governor=ondemand
+pm02.emwj.lan cpu_governor=ondemand
+pm03.emwj.lan cpu_governor=ondemand
+pm04.emwj.lan cpu_governor=ondemand
+pm05.emwj.lan cpu_governor=performance
+pm06.emwj.lan cpu_governor=performance
 
 [proxmox:vars]
 distro=debian

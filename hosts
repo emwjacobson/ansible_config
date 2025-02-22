@@ -1,9 +1,6 @@
 [head]
 head.emwj.lan
 
-#[docker]
-#docker.emwj.lan
-
 [swarm]
 swarm0.emwj.lan
 swarm1.emwj.lan
@@ -38,8 +35,6 @@ distro=debian
 distro_ver=12
 
 [ubuntu:children]
-head
-#docker
 swarm
 playground
 nginx
@@ -52,6 +47,7 @@ distro_ver=22.04
 
 [debian:children]
 frigate
+head
 
 [debian:vars]
 distro=debian
@@ -59,10 +55,11 @@ distro_ver=12
 
 [vms:children]
 head
-#docker
-swarm
+swarm # swarm0, swarm1, swarm2, swarm3
 playground
 nginx
 plex
 pihole
+# nextcloud
+# homeassistant
 

@@ -12,3 +12,4 @@
       - sudo
       - vim
       - htop
+  when: distro == "debian" or distro == "ubuntu" 

@@ -24,11 +24,6 @@
   hosts: nginx
   roles:
     - nginx
-#- name: Docker
-#  ignore_unreachable: true
-#  hosts: docker
-#  roles:
-#    - docker
 - name: Swarm
   ignore_unreachable: true
   hosts: swarm

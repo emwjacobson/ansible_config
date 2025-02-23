@@ -18,9 +18,9 @@ get_distro() {
 distro=$(get_distro)
 
 if [[ "${distro}" == "debian" ]]; then
-  sudo apt install -y curl wget sudo libuser
+  apt install -y curl wget sudo libuser
 elif [[ "${distro}" == "rhel" ]]; then
-  sudo dnf install -y curl wget 
+  dnf install -y curl wget 
 else
   echo "Unsupported distro"
   exit 1

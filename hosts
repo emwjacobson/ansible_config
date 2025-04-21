@@ -20,7 +20,7 @@ plex.emwj.lan
 pihole.emwj.lan
 
 [frigate]
-frigate.emwj.lan ansible_host=10.10.10.2
+frigate.emwj.lan
 
 [proxmox]
 pm01.emwj.lan cpu_governor=ondemand

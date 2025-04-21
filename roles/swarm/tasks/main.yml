@@ -1,15 +1,23 @@
 ---
 - name: Mount Swarm NFS
   ansible.posix.mount:
-    src: nas.emwj.lan:/Swarm
+    src: nas-vms.emwj.lan:/Swarm
     path: /mnt/swarm
     opts: defaults,user,nolock
     state: mounted
     fstype: nfs
-- name: Mount NFS
+- name: Mount Plex NFS
   ansible.posix.mount:
-    src: nas.emwj.lan:/Plex
+    src: nas-vms.emwj.lan:/Plex
     path: /mnt/Plex
     opts: defaults,user
     state: mounted
     fstype: nfs
+- name: Mount Storage NFS
+  ansible.posix.mount:
+    src: nas-vms.emwj.lan:/Storage
+    path: /mnt/Storage
+    opts: defaults,user
+    state: mounted
+    fstype: nfs
+

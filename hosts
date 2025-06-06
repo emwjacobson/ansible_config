@@ -22,6 +22,9 @@ pihole.emwj.lan
 [frigate]
 frigate.emwj.lan
 
+[foreman]
+foreman.emwj.lan
+
 [proxmox]
 pm01.emwj.lan cpu_governor=ondemand
 pm02.emwj.lan cpu_governor=ondemand
@@ -48,6 +51,7 @@ distro_ver=22.04
 [debian:children]
 frigate
 head
+foreman
 
 [debian:vars]
 distro=debian

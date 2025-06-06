@@ -1,5 +1,5 @@
 ---
-- name: Install common packages
+- name: Install common debian packages
   ansible.builtin.apt:
     state: present
     update_cache: true
@@ -13,3 +13,18 @@
       - vim
       - htop
   when: distro == "debian" or distro == "ubuntu" 
+
+- name: Install common RHEL packages
+  ansible.builtin.dnf:
+    state: present
+    update_cache: true
+    package:
+      - nfs-utils
+      - neovim
+      - rsyslog
+      - rsyslog-gnutls
+      - curl
+      - sudo
+      - vim
+      - htop
+  when: distro == "rocky"

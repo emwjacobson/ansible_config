@@ -51,11 +51,17 @@ distro_ver=22.04
 [debian:children]
 frigate
 head
-foreman
 
 [debian:vars]
 distro=debian
 distro_ver=12
+
+[rocky:children]
+foreman
+
+[rocky:vars]
+distro=rocky
+distro_ver=9
 
 [vms:children]
 head

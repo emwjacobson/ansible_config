@@ -3,13 +3,25 @@
   ansible.builtin.group:
     name: sudo
     state: present
-- name: Add emerson user
+  when: distro == "debian" or distro == "ubuntu"
+
+- name: Add emerson user Debian
   ansible.builtin.user:
     name: emerson
     shell: /bin/bash
     groups: sudo
     append: yes
     password: "$6$kI8Fi4F01xKugIjg$vgc2kWihrrXKBy3TnOjZWfMNAd/Mk3M0uPSF3I/i6aNYDqL3BqZmBqgHdKQKdgpYEQqBGVIzvNkC00x7hsIqS/"
+  when: distro == "debian" or distro == "ubuntu"
+
+- name: Add emerson user RHEL
+  ansible.builtin.user:
+    name: emerson
+    shell: /bin/bash
+    groups: wheel
+    append: yes
+    password: "$6$kI8Fi4F01xKugIjg$vgc2kWihrrXKBy3TnOjZWfMNAd/Mk3M0uPSF3I/i6aNYDqL3BqZmBqgHdKQKdgpYEQqBGVIzvNkC00x7hsIqS/"
+
 - name: Add laptop SSH key
   ansible.posix.authorized_key:
     user: emerson
@@ -17,6 +29,7 @@
     state: present
     key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCg7U6kuT1/zt/Y7P83JhkdEfyWQDU3FZxE8umFjI6kJTLAK7N3IgVz+ihPwRwA4bc1PRFZBYkt3tlQ8pFWCBRMTyMMYOkEiFFrwgQNqXzkj1btfY3QiAqdK2KN3ICLxFjzouwdBrMonb/mI0GneyIe+CbCYrglphNxog91u1ElOYc5PAKWWlmqDhWjbRlrBTcnkucOkwrh0g3vJ19WFQL6/ufx/h3tIrrj+ZUuQkl883X1e1mFk9dB28FrO+LUxSqnak+Xa58b/HY87tzxoBGSVZ8H5jSnntZ4NaDwKgdVysCvJeKiugJvVCORVzef5REiPwR1ZCMBSbADcJDIMR+uY/Nq+tTOl47qA6Q6MGtSobbs6XnZyHYHnJX2lrom2HnHoyzJ2g73EPRFfOaHpPrpx8zV23MurbzSfJzuLsBWtBxuNV2/9nF7I3CTp3ZEOFTtSs4wgcbFjHsCRIjly/H+fkDRBBPux5/Z1+uH5aEVAAVChl45EC/I+8qKZA1DpFc="
     comment: "emerson@iphone"
+
 - name: Add head SSH key
   ansible.posix.authorized_key:
     user: emerson

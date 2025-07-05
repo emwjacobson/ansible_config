@@ -1,14 +1,32 @@
 ---
-- name: Install VM Packages
+- name: Install VM Packages Debian
   ansible.builtin.apt:
     state: present
     update_cache: true
     package:
       - qemu-guest-agent
-- name: Upgrade packages
+  when: distro == "ubuntu" or distro == "debian"
+
+- name: Upgrade packages Debian
   ansible.builtin.apt:
     name: "*"
     state: latest
+  when: distro == "ubuntu" or distro == "debian"
+
+- name: Install VM packages RHEL
+  ansible.builtin.dnf:
+    state: present
+    update_cache: true
+    name:
+      - qemu-guest-agent
+  when: distro == "rocky"
+
+- name: Upgrade packages RHEL
+  ansible.builtin.dnf:
+    name: "*"
+    state: latest
+  when: distro == "rocky"
+
 - name: Make sure qemu guest agent is running
   ansible.builtin.systemd:
     state: started

@@ -14,11 +14,19 @@
       - htop
   when: distro == "debian" or distro == "ubuntu" 
 
+- name: Install EPEL Repo
+  ansible.builtin.dnf:
+    state: present
+    update_cache: true
+    name:
+      - epel-release
+  when: distro == "rocky"
+
 - name: Install common RHEL packages
   ansible.builtin.dnf:
     state: present
     update_cache: true
-    package:
+    name:
       - nfs-utils
       - neovim
       - rsyslog

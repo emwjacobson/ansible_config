@@ -20,10 +20,7 @@ plex.emwj.lan
 pihole.emwj.lan
 
 [frigate]
-frigate.emwj.lan
-
-[foreman]
-foreman.emwj.lan
+frigate.emwj.lan ansible_host=10.20.10.2
 
 [proxmox]
 pm01.emwj.lan cpu_governor=ondemand
@@ -57,7 +54,6 @@ distro=debian
 distro_ver=12
 
 [rocky:children]
-foreman
 
 [rocky:vars]
 distro=rocky

@@ -1,6 +1,7 @@
 ---
 - include_tasks: packages.yml
 - include_tasks: rsyslog.yml
+- include_tasks: network.yml
 
 - name: Vacuum Logs
   ansible.builtin.command:

@@ -1,34 +1,34 @@
 [head]
-head.emwj.lan
+head.vm.emwj.lan
 
 [swarm]
-swarm0.emwj.lan
-swarm1.emwj.lan
-swarm2.emwj.lan
-swarm3.emwj.lan
+swarm0.vm.emwj.lan
+swarm1.vm.emwj.lan
+swarm2.vm.emwj.lan
+swarm3.vm.emwj.lan
 
 [playground]
-playground.emwj.lan
+playground.vm.emwj.lan
 
 [nginx]
-nginx.emwj.lan
+nginx.vm.emwj.lan
 
 [plex]
-plex.emwj.lan
+plex.vm.emwj.lan
 
 [pihole]
-pihole.emwj.lan
+pihole.vm.emwj.lan
 
 [frigate]
-frigate.emwj.lan ansible_host=10.20.10.2
+frigate.secure.emwj.lan ansible_host=10.20.10.2
 
 [proxmox]
-pm01.emwj.lan cpu_governor=ondemand
-pm02.emwj.lan cpu_governor=ondemand
-pm03.emwj.lan cpu_governor=ondemand
-pm04.emwj.lan cpu_governor=ondemand
-pm05.emwj.lan cpu_governor=performance
-pm06.emwj.lan cpu_governor=performance
+pm01.secure.emwj.lan cpu_governor=ondemand
+pm02.secure.emwj.lan cpu_governor=ondemand
+pm03.secure.emwj.lan cpu_governor=ondemand
+pm04.secure.emwj.lan cpu_governor=ondemand
+pm05.secure.emwj.lan cpu_governor=performance
+pm06.secure.emwj.lan cpu_governor=performance
 
 [proxmox:vars]
 distro=debian

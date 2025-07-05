@@ -1,11 +1,19 @@
 ---
-- name: Install VM Packages Debian
+- name: Install VM Packages Debian and Ubuntu
   ansible.builtin.apt:
     state: present
     update_cache: true
     package:
       - qemu-guest-agent
   when: distro == "ubuntu" or distro == "debian"
+
+- name: Install VM Packages Debian
+  ansible.builtin.apt:
+    state: present
+    update_cache: true
+    package:
+      - systemd-resolved
+  when: distro == "debian"
 
 - name: Upgrade packages Debian
   ansible.builtin.apt:

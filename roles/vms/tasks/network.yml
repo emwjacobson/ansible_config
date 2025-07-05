@@ -1,0 +1,24 @@
+---
+- name: Leave resolv.conf Alone
+  ansible.builtin.copy:
+    content: "make_resolv_conf() { :; }"
+    dest: /etc/dhcp/dhclient-enter-hooks.d/leave_my_resolv_conf_alone
+    mode: 0755
+
+- name: Configure DHCP
+  ansible.builtin.copy:
+    content: |
+      [Match]
+      Name=en*
+      [Network]
+      DHCP=yes
+      [DHCPv4]
+      UseDomains=yes
+    dest: /etc/systemd/network/dhcp.network
+  notify: Reload systemd-networkd
+
+- name: State systemd-networkd
+  ansible.builtin.systemd:
+    name: systemd-networkd
+    enabled: true
+    state: started

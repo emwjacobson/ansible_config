@@ -21,6 +21,7 @@
     groups: wheel
     append: yes
     password: "$6$kI8Fi4F01xKugIjg$vgc2kWihrrXKBy3TnOjZWfMNAd/Mk3M0uPSF3I/i6aNYDqL3BqZmBqgHdKQKdgpYEQqBGVIzvNkC00x7hsIqS/"
+  when: distro == "rocky"
 
 - name: Add laptop SSH key
   ansible.posix.authorized_key:

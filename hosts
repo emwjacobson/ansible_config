@@ -19,6 +19,9 @@ plex.vm.emwj.lan
 [pihole]
 pihole.vm.emwj.lan
 
+[immich]
+immich.vm.emwj.lan
+
 [frigate]
 frigate.secure.emwj.lan ansible_host=10.20.10.2
 
@@ -45,13 +48,20 @@ pihole
 distro=ubuntu
 distro_ver=22.04
 
-[debian:children]
+[debian12:children]
 frigate
 head
 
-[debian:vars]
+[debian12:vars]
 distro=debian
 distro_ver=12
+
+[debian13:children]
+immich
+
+[debian13:vars]
+distro=debian
+distro_ver=13
 
 [rocky:children]
 
@@ -62,6 +72,7 @@ distro_ver=9
 [vms:children]
 head
 swarm # swarm0, swarm1, swarm2, swarm3
+immich
 playground
 nginx
 plex

@@ -1,4 +1,10 @@
 ---
+- name: Ensure dhclient-enter-hooks.d exists
+  ansible.builtin.file:
+    path: /etc/dhcp/dhclient-enter-hooks.d/
+    state: directory
+    mode: 0755
+
 - name: Leave resolv.conf Alone
   ansible.builtin.copy:
     content: "make_resolv_conf() { :; }"

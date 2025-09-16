@@ -22,6 +22,12 @@ pihole.vm.emwj.lan
 [immich]
 immich.vm.emwj.lan
 
+[arr]
+arr.vm.emwj.lan
+
+[docker]
+docker.vm.emwj.lan
+
 [frigate]
 frigate.secure.emwj.lan ansible_host=10.20.10.2
 
@@ -37,6 +43,8 @@ pm06.secure.emwj.lan cpu_governor=performance
 distro=debian
 distro_ver=12
 
+
+# Vars for Ubuntu 22.04
 [ubuntu:children]
 swarm
 playground
@@ -48,6 +56,8 @@ pihole
 distro=ubuntu
 distro_ver=22.04
 
+
+# Vars for Debian 12
 [debian12:children]
 frigate
 head
@@ -56,23 +66,33 @@ head
 distro=debian
 distro_ver=12
 
+
+# Vars for Debian 13
 [debian13:children]
 immich
+arr
+docker
 
 [debian13:vars]
 distro=debian
 distro_ver=13
 
+
+# Vars for Rocky 9
 [rocky:children]
 
 [rocky:vars]
 distro=rocky
 distro_ver=9
 
+
+# Vars for VMs
 [vms:children]
 head
 swarm # swarm0, swarm1, swarm2, swarm3
 immich
+arr
+docker
 playground
 nginx
 plex

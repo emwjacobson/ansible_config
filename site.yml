@@ -1,31 +1,21 @@
 ---
 - name: Common
-  ignore_unreachable: true
   hosts: all
   roles:
     - common
 - name: Proxmox
-  ignore_unreachable: true
   hosts: proxmox
   roles:
     - proxmox
 - name: VMs
-  ignore_unreachable: true
   hosts: vms
   roles:
     - vms
 - name: Head
-  ignore_unreachable: true
   hosts: head
   roles:
     - head
 - name: Nginx
-  ignore_unreachable: true
   hosts: nginx
   roles:
     - nginx
-- name: Swarm
-  ignore_unreachable: true
-  hosts: swarm
-  roles:
-    - swarm
